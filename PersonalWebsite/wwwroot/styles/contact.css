@@ -1,0 +1,132 @@
+/* استایل بخش فرم تماس */
+.contact-form-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact-form-section h2 {
+    font-size: 2em;
+    color: #007BFF;
+    margin-bottom: 20px;
+    animation: slideInUp 1s ease-in-out;
+}
+
+.contact-description {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.social-icon {
+    font-size: 1.5em;
+    color: #007BFF;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #0056b3;
+    transform: translateY(-5px);
+}
+
+.form-title {
+    font-size: 1.8em;
+    color: #007BFF;
+    margin-bottom: 20px;
+    animation: slideInUp 1s ease-in-out;
+}
+
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.9); /* شفافیت */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideInUp 1s ease-in-out;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    transform: scale(1.02);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form .btn {
+    background: linear-gradient(135deg, #007BFF, #00a8ff); /* گرادیانت */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+}
+
+.contact-form .btn:hover {
+    background: linear-gradient(135deg, #0056b3, #007BFF); /* گرادیانت هنگام هاور */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form .btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.contact-form .btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

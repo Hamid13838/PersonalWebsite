@@ -1,0 +1,125 @@
+/* استایل بخش پروژه‌ها */
+.projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.projects h2 {
+    font-size: 2em;
+    color: #007BFF;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-left: 20px;
+    border-radius: 10px 0 0 10px;
+}
+
+.project-item .project-info {
+    padding: 20px;
+    text-align: right;
+}
+
+.project-item h3 {
+    font-size: 1.5em;
+    color: #007BFF;
+    margin: 0 0 10px;
+}
+
+.project-item p {
+    color: #666;
+    font-size: 1em;
+}
+
+/* استایل بخش مقالات */
+.articles {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.articles h2 {
+    font-size: 2em;
+    color: #007BFF;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.article-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.article-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.article-item h3 {
+    font-size: 1.5em;
+    color: #007BFF;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.article-item p {
+    padding: 0 10px;
+    color: #666;
+    font-size: 1em;
+}
+
+.article-item .read-more {
+    display: inline-block;
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.article-item .read-more:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}

@@ -1,0 +1,399 @@
+/* انیمیشن‌های عمومی */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* استایل‌های عمومی */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* بخش توضیحات و بیوگرافی در بالای صفحه */
+.bio-section {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* شفافیت */
+    padding: 40px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.bio-section .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bio-section .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007BFF;
+    animation: slideInUp 1s ease-in-out;
+}
+
+.bio-section .profile-info h1 {
+    font-size: 2em;
+    margin: 0;
+    animation: slideInRight 1s ease-in-out;
+}
+
+.bio-section .profile-info p {
+    font-size: 1.2em;
+    color: #666;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.bio-section .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.bio-section .btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bio-section .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* هدر عمودی در سمت راست */
+.vertical-header {
+    width: 300px;
+    background-color: rgba(248, 249, 250, 0.9); /* شفافیت */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    animation: slideInRight 1s ease-in-out;
+}
+
+.vertical-header .profile {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.vertical-header .profile h1 {
+    font-size: 1.5em;
+    margin: 0 0 20px;
+}
+
+.vertical-header .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007BFF;
+    margin-bottom: 20px;
+}
+
+.vertical-header .profile p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.vertical-header .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.vertical-header .social-icon {
+    font-size: 1.5em;
+    color: #007BFF;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.vertical-header .social-icon:hover {
+    color: #0056b3;
+    transform: translateY(-5px);
+}
+
+.vertical-header .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.vertical-header .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.vertical-header .btn:hover {
+    background-color: #218838;
+    transform: translateY(-5px);
+}
+
+/* محتوای اصلی */
+.content {
+    margin-right: 320px; /* فاصله از هدر عمودی */
+    padding: 20px;
+    width: calc(100% - 320px); /* عرض محتوا */
+    flex: 1;
+}
+
+/* استایل بخش پروژه‌ها */
+.projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.projects h2 {
+    font-size: 2em;
+    color: #007BFF;
+    margin-bottom: 30px;
+    text-align: center;
+    animation: slideInUp 1s ease-in-out;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* شفافیت */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    animation: slideInUp 1s ease-in-out;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0.9; /* شفافیت هنگام هاور */
+}
+
+.project-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-left: 20px;
+    border-radius: 10px 0 0 10px;
+}
+
+.project-item .project-info {
+    padding: 20px;
+    text-align: right;
+}
+
+.project-item h3 {
+    font-size: 1.5em;
+    color: #007BFF;
+    margin: 0 0 10px;
+}
+
+.project-item p {
+    color: #666;
+    font-size: 1em;
+}
+
+/* استایل بخش مقالات */
+.articles {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.articles h2 {
+    font-size: 2em;
+    color: #007BFF;
+    margin-bottom: 30px;
+    text-align: center;
+    animation: slideInUp 1s ease-in-out;
+}
+
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.article-item {
+    background-color: rgba(255, 255, 255, 0.9); /* شفافیت */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    animation: slideInUp 1s ease-in-out;
+}
+
+.article-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0.9; /* شفافیت هنگام هاور */
+}
+
+.article-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.article-item h3 {
+    font-size: 1.5em;
+    color: #007BFF;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.article-item p {
+    padding: 0 10px;
+    color: #666;
+    font-size: 1em;
+}
+
+.article-item .read-more {
+    display: inline-block;
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.article-item .read-more:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+
+/* فوتر */
+.footer {
+    background-color: rgba(51, 51, 51, 0.9); /* شفافیت */
+    color: white;
+    padding: 40px 20px;
+    margin-top: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 1em;
+    color: #ccc;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #007BFF;
+}
+
+.footer-section .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-section .social-icon {
+    font-size: 1.5em;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-section .social-icon:hover {
+    color: #007BFF;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 0.9em;
+    color: #ccc;
+}
