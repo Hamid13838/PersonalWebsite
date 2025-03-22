@@ -1,0 +1,19 @@
+﻿@model IEnumerable<PersonalWebsite.ViewComponentModels.ProjectModel>
+<section class="projects">
+    <h2>خاص‌ترین پروژه‌ها</h2>
+    <d class="project-list">
+
+        @foreach (var proje in Model)
+        {
+
+            <div class="project-item">
+                <img src="~/images/project1.png" alt=" @proje.Title">
+                <div class="project-info">
+                    <h3>@proje.Title</h3>
+                    <p>@proje.Description</p>
+                </div>
+            </div>
+        }
+
+        </div>
+</section>

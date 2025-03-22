@@ -1,0 +1,21 @@
+﻿@model IEnumerable<PersonalWebsite.ViewComponentModels.ArticleModel>
+
+<section class="articles">
+    <h2>آخرین مقالات</h2>
+    <div class="article-list">
+        @foreach (var item in Model)
+        {
+            <div class="article-item">
+                <img src="images/@item.Image" alt="@item.Title">
+                <div class="article-content">
+                    <h3>@item.Title</h3>
+                    <p>@item.Description</p>
+                </div>
+                <div class="read-more-wrapper">
+                    <a href="#" class="read-more">ادامه مطلب</a>
+                </div>
+            </div>
+
+        }
+    </div>
+</section>
