@@ -201,7 +201,7 @@ a {
 
 .projects h2 {
     font-size: 2em;
-    color: #007BFF;
+    color: black;
     margin-bottom: 30px;
     text-align: center;
     animation: slideInUp 1s ease-in-out;

@@ -5,12 +5,12 @@
     padding: 20px;
 }
 
-.projects h2 {
-    font-size: 2em;
-    color: #007BFF;
-    margin-bottom: 30px;
-    text-align: center;
-}
+    .projects h2 {
+        font-size: 2em;
+        color : black;
+        margin-bottom: 30px;
+        text-align: center;
+    }
 
 .project-list {
     display: grid;
@@ -46,16 +46,14 @@
     text-align: right;
 }
 
-.project-item h3 {
-    font-size: 1.5em;
-    color: #007BFF;
-    margin: 0 0 10px;
-}
+    .project-item h3 {
+        font-size: 1.5em;
+        margin: 0 0 10px;
+    }
 
-.project-item p {
-    color: #666;
-    font-size: 1em;
-}
+    .project-item p { 
+        font-size: 1em;
+    }
 
 
 
